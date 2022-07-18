@@ -13,7 +13,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from "../imges/logo.svg"
-
+import {useNavigate} from 'react-router-dom'
 const pages = ['Գլխավոր', 'Նորություններ', 'Կրթություն','Մեր առօրյան','Գիտական հետազոտություններ ','Մեր մասին','Համագործակցություն'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
@@ -24,11 +24,22 @@ const ResponsiveAppBar = () => {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
+  // const history = useHistory();
+  const navigate = useNavigate();
 
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
+  const handleCloseNavMenu = (e) => {
+    switch (e.target.textContent) {
+      case "Գլխավոր":
+        navigate('/');
+        break;
+      case "Նորություններ":
+        navigate("/news")
+        break;
+      case "Կրթություն":
+        navigate("/Կրթություն")
+        break;
+    }
+  }
 
   return (
     <AppBar sx={{background:'#1C4E6F'}} position="static">
@@ -75,7 +86,7 @@ const ResponsiveAppBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                onClick={handleCloseNavMenu}
+                onClick={(e)=>handleCloseNavMenu(e)}
                 sx={{ mx:2, my: 3, color: 'white', display: 'block' }}
               >
                 {page}

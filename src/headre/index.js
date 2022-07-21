@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import logo from "../imges/logo.svg"
 import {useNavigate} from 'react-router-dom'
-const pages = ['Գլխավոր', 'Նորություններ', 'Կրթություն','Մեր առօրյան','Գիտական հետազոտություններ ','Մեր մասին','Համագործակցություն'];
+const pages = ['Գլխավոր', 'Նորություններ', 'Կրթություն','Մեր առօրյան','Գիտական հետազոտություններ','Մեր մասին','Համագործակցություն'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const ResponsiveAppBar = () => {
@@ -36,7 +36,10 @@ const ResponsiveAppBar = () => {
         navigate("/news")
         break;
       case "Կրթություն":
-        navigate("/Կրթություն")
+        navigate("/education")
+        break;
+      case "Գիտական հետազոտություններ":
+        navigate("/story")
         break;
     }
   }

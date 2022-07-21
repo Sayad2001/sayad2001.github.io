@@ -8,17 +8,22 @@
   .under-menu {
     height: 600px;
     width: 100%;
-    background-image: url(../../imges/backgroindimg1.png);
-    padding-top: 40px;
-    padding-left: 15%;
     display: flex;
+    img{
+      background-size: cover;
+      width: 100%;
+      position: absolute;
+    }
     .text {
+      padding: 30px 50px;
+      padding-bottom: 0 !important;
       width: 70%;
       height: 100%;
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
       flex-direction: column;
+      z-index: 2;
       h1 {
         font-weight: 700;
         font-size: 30px;
@@ -44,6 +49,7 @@
       width: 30%;
       display: flex;
       justify-content: center;
+      z-index: 2;
       .languages-div {
         width: 300px;
         height: 40px;
@@ -80,7 +86,7 @@
     }
   }
   .news-section-news {
-   width: 80%;
+   width: 100%;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -92,6 +98,7 @@
     overflow: hidden;
      height: 300px;
      margin: 32px 0;
+     width: 80%;
     .news-card-text{
       height: 100%;
       background-color: #818181;
@@ -121,6 +128,8 @@
 }
 .Pagination{
   margin: 50px;
+  display: flex;
+  justify-content: center;
 }
 .main-parts {
   width: 100%;

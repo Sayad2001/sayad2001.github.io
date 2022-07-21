@@ -10,7 +10,7 @@ import cardimg1 from "../../imges/cardimg1.png";
 import cardimg2 from "../../imges/caardimg2.png";
 import cardimg3 from "../../imges/cardimg3.png";
 import { NavLink } from "react-router-dom";
-
+import img  from  "../../imges/backgroindimg1.png"
 let arry = [
   {
     date: "11.22.2022",
@@ -113,6 +113,7 @@ export default function FirstPage() {
   return (
     <div className="first-page">
       <div className="under-menu">
+        <img src={img}></img>
         <div className="text">
           <h1>ՀՀ ՊՆ Վ. ՍԱՐԳՍՅԱՆԻ ԱՆՎԱՆ ՌԱԶՄԱԿԱՆ ՀԱՄԱԼՍԱՐԱՆ</h1>
           <div className="aphorism">
